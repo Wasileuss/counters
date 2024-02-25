@@ -1,0 +1,43 @@
+$mainColor: #7D7D7D;
+$blue: #6B77E5;
+$dark: #37393F;
+$white: #fff;
+$green: #40DDB6;
+$yellow: #FFA722;
+
+
+$pc: toEm(1399.98);
+$pcMin: toEm(1199.98);
+$tablet: toEm(991.98);
+$mobile: toEm(767.98);
+$mobileSmall: toEm(575.98);
+$minMobileSmall: toEm(576);
+
+[class*="__container"] {
+	max-width: toRem($maxWidthContainer);
+	padding: 0 toRem(15);
+	margin: 0 auto;
+}
+
+
+body {
+	font-family: "Inter", sans-serif;
+	font-size: toRem(18);
+
+	&.menu-open {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+}
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	& > main {
+		flex: 1 1 auto;
+	}
+}

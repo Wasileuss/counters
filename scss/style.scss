@@ -1,0 +1,142 @@
+@use "sass:math";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1250;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 20;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+@import "_functions.scss";
+@import "_temple.scss";
+@import "_fonts.scss";
+@import "_icons.scss";
+@import "_reset.scss";
+@import "_common.scss";
+
+//========================================================================================================================================================
+
+.counters {
+	padding-top: toRem(100);
+	padding-bottom: toRem(100);
+	background-color: $dark;
+	color: $white;
+
+	// .counters__screen
+	&__screen {
+		min-height: 80svh;
+	}
+	// .counters__container
+	&__container {
+	}
+	// .counters__content
+	&__content {
+		margin-bottom: toRem(15);
+	}
+	// .counters__counter
+	&__counter {
+	}
+	// .counters__title
+	&__title {
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: toRem(5);
+	}
+}
+.content-item {
+	margin-bottom: toRem(40);
+
+	// .content-item__box
+	&__box {
+		display: flex;
+		align-items: center;
+		padding: toRem(30);
+		font-size: toRem(30);
+		border: toRem(2) rgb(146, 146, 36) dashed;
+		background-color: #2e2f34;
+	}
+
+	code {
+		margin-bottom: toRem(5);
+	}
+}
+
+//========================================================================================================================================================
+
+.counters-svg {
+	padding-top: toRem(100);
+	padding-bottom: toRem(100);
+	background-color: $dark;
+	color: $white;
+
+	// .counters-svg__container
+	&__container {
+	}
+	// .counters-svg__items
+	&__items {
+		display: flex;
+		gap: toRem(20);
+		flex-wrap: wrap;
+	}
+	// .counters-svg__item
+	&__item {
+		flex: 1 1 auto;
+	}
+}
+.item-svg {
+	display: flex;
+	gap: toRem(15);
+	align-items: center;
+	padding: toRem(30);
+	border: toRem(2) solid $blue;
+	background-color: #2e2f34;
+	flex-wrap: wrap;
+
+	@media (max-width:$mobileSmall){
+		 justify-content: center; 
+		 text-align: center;
+	}
+
+
+	// .item-svg__box
+	&__box {
+		aspect-ratio: 1 / 1;
+		width: toRem(124);
+		flex-basis: toRem124;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+			// item-svg__box--big--big
+			&--big{
+				width: 40%;
+				// width: toRem(424);
+				
+				// @media (max-width:$pc){
+				// 	width: toRem(324);
+				// }
+			}
+
+
+	}
+	
+	// .item-svg__count
+	&__count {
+		position: relative;
+		font-size: toRem(24);
+		font-weight: 600;
+	}
+	// .item-svg__text
+	&__text {
+		font-weight: 700;
+		font-size: toRem(24);
+		& > *:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+}

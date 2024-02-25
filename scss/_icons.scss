@@ -1,0 +1,67 @@
+[class*="_icon-"]::before {
+	display: inline-block;
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+._icon-arr-h:before {
+	content: "\e900";
+  }
+  ._icon-business:before {
+	content: "\e901";
+  }
+  ._icon-check:before {
+	content: "\e902";
+  }
+  ._icon-cup:before {
+	content: "\e903";
+  }
+  ._icon-exp:before {
+	content: "\e904";
+  }
+  ._icon-fb-s:before {
+	content: "\e905";
+  }
+  ._icon-geo-h:before {
+	content: "\e906";
+  }
+  ._icon-inst-s:before {
+	content: "\e907";
+  }
+  ._icon-mail-h:before {
+	content: "\e908";
+  }
+  ._icon-name:before {
+	content: "\e909";
+  }
+  ._icon-p-s:before {
+	content: "\e90a";
+  }
+  ._icon-phone:before {
+	content: "\e90b";
+  }
+  ._icon-play:before {
+	content: "\e90c";
+  }
+  ._icon-rate-fill:before {
+	content: "\e90d";
+  }
+  ._icon-rate:before {
+	content: "\e90e";
+  }
+  ._icon-star:before {
+	content: "\e90f";
+  }
+  ._icon-time-h:before {
+	content: "\e910";
+  }
+  ._icon-tw-s:before {
+	content: "\e911";
+  }
+  

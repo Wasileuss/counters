@@ -1,0 +1,254 @@
+.title {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+	&.right-whitecollar__title {
+		max-width: toRem(415);
+		@include adaptiveValue("margin-bottom", 20, 15);
+	}
+
+	&.expertise__title {
+		@include adaptiveValue("margin-bottom", 40, 30);
+		max-width: toRem(495);
+	}
+
+	&.products__title {
+		max-width: toRem(555);
+	}
+
+	.products__header & {
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+	}
+	
+	 &.work__title{
+		@include adaptiveValue("margin-bottom", 34, 20);
+	}
+
+	 &.book__title{
+		@include adaptiveValue("margin-bottom", 24, 20);
+	}
+	// .title--left
+	&--left {
+		text-align: left;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	// .title__label
+	&__label {
+	}
+	// .title__main
+	&__main {
+	}
+
+	// .title__text
+	&__text {
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: 1.46;
+
+		.next &{
+			color: $white;
+		}
+		// .title__text--gray
+		&--gray{
+			color: $mainColor;
+		}
+	}
+}
+
+.main-title {
+	// color: $dark;
+	@extend %PS;
+	@include adaptiveValue("font-size", 40, 24);
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: toEm(23, 40);
+
+	.work__title &{
+		max-width: toRem(426);
+	}
+}
+
+.label-title {
+	// color: $dark;
+	line-height: 1.46;
+	font-weight: 500;
+	display: inline-flex;
+	gap: toEm(6, 18);
+	text-transform: capitalize;
+	margin-bottom: toEm(16, 18);
+
+	@include adaptiveValue("font-size", 18, 16);
+
+	&::before {
+		content: "";
+		width: toEm(12, 18);
+		height: toEm(12, 18);
+		flex: 0 0 toEm(12, 18);
+		background-color: $green;
+		margin-top: toEm(7, 18);
+	}
+	&.hero__label {
+		font-weight: 600;
+		margin-bottom: toRem(10);
+		display: inline-block;
+		@include adaptiveValue("font-size", 18, 16, 0, 1920, 992);
+	}
+	&.middle-footer__title {
+		@extend %PS;
+		font-weight: 600;
+		margin-bottom: toEm(24, 20);
+
+		@media (max-width: $mobileSmall) {
+			margin-bottom: toRem(0);
+		}
+		&::before {
+			font-size: toRem(20);
+			width: toEm(12, 20);
+			height: toEm(12, 20);
+			flex: 0 0 toEm(12, 20);
+		}
+	}
+
+	// .title__arr
+	&__arr {
+		position: relative;
+		text-align: left;
+		width: 100%;
+
+		._spoller-active > &::before {
+			transform: rotate(180deg) translateY(50%);
+		}
+
+		&::before {
+			display: none;
+			position: absolute;
+			top: 50%;
+			right: toRem(25);
+			transform: translateY(-50%);
+			font-size: toRem(16);
+			transition: transform 0.3s ease 0s;
+
+			@media (max-width: $mobileSmall) {
+				display: block;
+			}
+		}
+	}
+	// .title--blue
+	&--blue {
+		color: $green;
+
+		&::before {
+			background-color: $blue;
+		}
+	}
+	// .title--white
+	&--white {
+		color: $white;
+	}
+}
+
+.social {
+	display: flex;
+	gap: toRem(16);
+	font-size: toRem(17);
+	line-height: 1;
+	flex-wrap: wrap;
+
+	// .social__item
+	&__item {
+		align-self: center;
+		transition: color 0.3s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $green;
+			}
+		}
+	}
+}
+
+.button {
+	padding: toRem(22) toRem(27);
+	background-color: $blue;
+	color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	text-transform: capitalize;
+	transition: all 0.3s;
+	position: relative;
+	z-index: 2;
+
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+			background-color: $green;
+			color: $dark;
+		}
+		&:active {
+			box-shadow: none;
+		}
+		&.item-expertise__button {
+			@include adaptiveValue("font-size", 25, 20);
+		}
+	}
+
+	//
+
+	// .button--green
+	&--green {
+		background-color: $green;
+		color: $dark;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $white;
+				box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+				background-color: $blue;
+			}
+		}
+	}
+
+	// .button--white
+	&--white {
+		color: $white;
+	}
+
+	&.header__button {
+		flex-shrink: 0;
+		align-self: center;
+		@include adaptiveValue("padding-top", 22, 12, 0, 1920, 992);
+		@include adaptiveValue("padding-bottom", 22, 12, 0, 1920, 992);
+	}
+
+	&.products__button {
+		min-width: toRem(185);
+
+		@media (max-width: $tablet) {
+			min-width: auto;
+		}
+	}
+	.page__products > & {
+		width: 40%;
+		margin-left: auto;
+		margin-right: auto;
+		min-width: toRem(185);
+	}
+}
+
+.green {
+	color: $green;
+}
+.blue {
+	color: $blue;
+}
+.bold{
+	font-weight: 700;
+}

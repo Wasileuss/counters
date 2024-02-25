@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="module" src="js/script.js"></script>
+	<title>COUNTERS</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<div class="page__counters counters">
+				<div class="counters__screen"></div>
+				<div class="counters__container">
+					<div class="counters__content content-item">
+						<div class="counters__title">Звичайний лічильник data-counter</div>
+						<div class="content-item__box">
+							<span class="counters__counter" data-counter>15500</span>
+						</div>
+					</div>
+					<div class="counters__content content-item">
+						<div class="counters__title">data-counter="3s, 1px"</div>
+						<div class="content-item__box">
+							<span class="counters__counter" data-counter="3s, 1px">50</span>
+							<span>+</span>
+						</div>
+					</div>
+					<div class="counters__content content-item">
+						<div class="counters__title">data-counter="6s, 1px" data-repeat</div>
+						<div class="content-item__box">
+							<span class="counters__counter" data-repeat data-counter="6s, 1px">4230</span>
+							<span>+</span>
+						</div>
+					</div>
+					<div class="counters__content content-item">
+						<div class="counters__title">Лічильник з розділовим знаком з привʼязкою до регіону користувача
+						</div>
+						<code
+							class="counters__title">&lt span  data-repeat data-counter="4s, 11px" data-separator > 5230 &gt/span></code>
+						<div class="content-item__box">
+							<span class="counters__counter" data-repeat data-counter="4s, 11px" data-separator>5230</span>
+							<span>+</span>
+						</div>
+					</div>
+					<div class="counters__content content-item">
+						<div class="counters__title">Лічильник з кастомним розділовим знаком </div>
+						<code
+							class="counters__title">&lt span  data-repeat data-counter="9s, 7px" data-separator>234235,230 &gt/span></code>
+						<div class="content-item__box">
+							<span class="counters__counter" data-repeat data-counter="9s, 7px"
+								data-separator>234235,230</span>
+							<span>+</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page__svg-counters counters-svg">
+				<div class="counters-svg__container">
+					<div class="counters-svg__items">
+
+						<div class="counters-svg__item item-svg">
+							<div class="item-svg__box" data-circle-wrap="#37393F, #40DDB6,4px, full">
+								<div class="item-svg__count" data-counter="1.5s, 1px">
+									500
+								</div>
+								<div class="item-svg__count">
+									pts
+								</div>
+							</div>
+							<div class="item-svg__text">
+								<h4>
+									data-circle-wrap=
+								</h4>
+								<h4>
+									"#37393F, #40DDB6,4px, full"
+								</h4>
+							</div>
+						</div>
+						<div class="counters-svg__item item-svg">
+							<div class="item-svg__box" data-circle-wrap="#37393F, #40DDB6,4px">
+								<div class="item-svg__count" data-counter="1.5s, 1px">
+									60
+								</div>
+								<div class="item-svg__count">
+									%
+								</div>
+							</div>
+							<div class="item-svg__text">
+								<h4>
+									data-circle-wrap=
+								</h4>
+								<h4>
+									"#37393F, #40DDB6,4px"
+								</h4>
+							</div>
+						</div>
+						<div class="counters-svg__item item-svg">
+							<div class="item-svg__box" data-circle-wrap>
+								<div class="item-svg__count" data-counter="1.5s, 1px">
+									90
+								</div>
+								<div class="item-svg__count">
+									%
+								</div>
+							</div>
+							<div class="item-svg__text">
+								<h4>
+									За 
+								</h4>
+								<h4>
+									Змовченням просто
+								</h4>
+								<h4>
+									data-circle-wrap
+								</h4>
+							</div>
+						</div>
+						<div class="counters-svg__item item-svg">
+							<div class="item-svg__box item-svg__box--big"  data-circle-wrap="green, yellow,8px">
+								<div class="item-svg__count" data-repeat data-counter="2.3s, 1px">
+									50
+								</div>
+								<div class="item-svg__count">
+									%
+								</div>
+							</div>
+							<div class="item-svg__text">
+								<h4>
+									Нарешті
+								</h4>
+								<h4>
+									Адаптивне
+								</h4>
+								<h4>
+									Дивись стилі
+								</h4>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</main>
+
+
+
+	</div>
+
+</body>
+
+
+</html>
